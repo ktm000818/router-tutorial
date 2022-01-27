@@ -1,16 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
-import About from './pages/About';
 import Main from './pages/Main';
-import Profile from './pages/Profile';
 import './App.css';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/profiles/:username" element={<Profile />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/item1" element={<Main />} />
+        <Route path="/item2" element={<Main />} />
+        <Route path="/item3" element={<Main />} />
+        <Route path="/item4" element={<Main />} />
+        <Route path="/item5" element={<Main />} />
+      </Routes>
+    </>
+
   );
 };
 
