@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getWeatherApiKey } from "../etc/Config";
+import Nav from "./Nav";
 
 function Main () {
 
@@ -41,8 +42,13 @@ function Main () {
     }, [])
 
     return (
-        <div className="main-page-container">
-            <img src="backgrounds/bg2.jpg" width={"100%"} height={"100%"}/>
+        <div className="main-page-container">            
+            <img src="backgrounds/bg2.jpg" width={"100%"} height={"100%"} alt=""/>
+
+            <div className="main-page-nav">
+                <Nav/>
+            </div>
+
             <div className="main-page-text stop-dragging"><Link to="/about">How are you?</Link></div>
             <div className="main-page-text-weather-weather stop-dragging">서울 현재 날씨: {weather}</div>
             <div className="main-page-text-weather-temp stop-dragging">온도 : {temp}℃</div>
